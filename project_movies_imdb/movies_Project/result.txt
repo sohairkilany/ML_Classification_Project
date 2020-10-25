@@ -1,0 +1,80 @@
+# Check Missing Data
+# No missing data 
+# drop this columns ['title']  #this feature not affected the result 
+
+## Detect outliers & # handle outliers by drop"delete"
+### Deal with Imbalanced classes  ## ratingInteger column
+
+################ make handle outliers####################
+
+
+
+------------------------------------------------
+frist model logistic regression(Done)
+-------------with delet outliers
+without_cross_validation Accuracy =42  %
+without_cross_validation Accuracy && used Feature Scaling(StandardScaler) Accuracy=53 %
+with_cross_validation K-Fold= 4 Accuracy=40 %
+with_cross_validation K-Fold= 4 && used Feature Scaling(StandardScaler) Accuracy=54 %
+with_cross_validation K-Fold= 10 Accuracy= 40%
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler) Accuracy= 54%
+
+-------without delet outliers
+without_cross_validation Accuracy = 37 %
+without_cross_validation Accuracy && used Feature Scaling(StandardScaler) Accuracy= 58%
+with_cross_validation K-Fold= 4 && used Feature Scaling(StandardScaler) Accuracy= 53%
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler) Accuracy=54 %
+
+----------------------------------
+second model K Nearest Neighbors(Done)
+
+-------------with delet outliers   
+without_cross_validation && used Feature Scaling(StandardScaler) && K=3 Accuracy =34%
+without_cross_validation   && used Feature Scaling(StandardScaler) && K=2 Accuracy= 39%
+without_cross_validation   && used Feature Scaling(StandardScaler) && K=5 Accuracy= 48%
+the best k =16
+without_cross_validation   && used Feature Scaling(StandardScaler) && K=16 Accuracy= 52%
+with_cross_validation K-Fold= 4 && used Feature Scaling(StandardScaler) && K=16 Accuracy = 49%
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler)&& K=16 Accuracy= 47%
+
+-------without delet outliers
+without_cross_validation   && used Feature Scaling(StandardScaler) && K=16 Accuracy= 48%
+with_cross_validation K-Fold= 4 && used Feature Scaling(StandardScaler) && K=16 Accuracy =43 %
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler)&& K=16 Accuracy= 45%
+
+----------------------------------------
+third model SVC
+without_cross_validation && used Feature Scaling(StandardScaler) Accuracy = 57%
+without_cross_validation Accuracy = 42%
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler) Accuracy =53%
+
+----------------------------------------
+forth model DecisionTreeClassifier (Done)
+Parameters
+   criterion='gini', spliter='best', max_depth=None, min_samples_split=2 
+without_cross_validation Accuracy = 46%
+without_cross_validation   && used Feature Scaling(StandardScaler)= 44 %
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler)Accuracy=44  %
+
+-------------------------------------
+fifth model XGBClassifier 
+
+-------------with delet outliers 
+ without_cross_validation  && n_estimator= 1000 && used Feature Scaling(StandardScaler) Accuracy = 54%
+without_cross_validation  &&  n_estimator= 1000  Accuracy=54 %
+with_cross_validation K-Fold= 10  && n_estimator= 1000 Accuracy= 50%
+
+-------without delet outliers
+ without_cross_validation  && n_estimator= 1000 && used Feature Scaling(StandardScaler) Accuracy = 55%
+
+------------------------------------------------
+sixth model Random Forest
+
+without_cross_validation  && used Feature Scaling(StandardScaler)  Accuracy= 54 %
+without_cross_validation Accuracy= 55 %
+with_cross_validation K-Fold= 10  && without scaling Accuracy = 51%
+with_cross_validation K-Fold= 10 && used Feature Scaling(StandardScaler) Accuracy= 53 %
+ 
+
+
+
